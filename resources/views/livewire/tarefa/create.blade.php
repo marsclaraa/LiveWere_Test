@@ -1,4 +1,15 @@
 <div class="mt-5">
+{{-- o if faz parte do blade e é usado para criar este alerta
+  Tudo isso é um seção (aparece uma mensagem ou dado na tela, cuidado com a segurança da mensagem) --}}
+
+  @if(@session()->has('success')){{--emite mensagem de sucesso--}}
+  <div class="alert alert-success alert-dismissible fade show" role="alert">
+    {{session('success')}}
+    <button type="button" class="btn-close"
+    data-bs-dismiss="alert" aria-laber="Close" ></button>
+  </div>
+      @endif
+
     {{-- Todo arquivo criado tem que ter uma div de abertura e fechamento. --}}
     <div class="card">
         <h5 class="card-header">Cadastro de Tarefas </h5>
